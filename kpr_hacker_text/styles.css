@@ -1,0 +1,84 @@
+html, body {
+    background-color: #000a22;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, div {
+    color: #ffffff;
+    font-family: 'Arial', 'monospace';
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.text-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#cool-text {
+    text-transform: uppercase;
+
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+
+    border-radius: 0.2rem;
+    font-size: 64pt;
+    transition: background-color 1000ms, color 500ms;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes translateFromLeft {
+    from {
+        transform: translateX(-101%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes translateToRight {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(101%);
+    }
+}
+
+.text-container:hover #cool-text {
+    color: #000a22;
+}
+
+.background {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-size: cover;
+    transform: translateX(101%);
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+
+
+svg {
+    position: absolute;
+    width: 50px;
+    fill: #000a22;
+    bottom: -10px;
+    right: 0;
+    z-index: 2;
+}
